@@ -39,7 +39,7 @@ const addNote = () => {
         <button @click="showModal=true">Add a note</button>
       </header>
       <div class="card-container">
-        <div v-for="note in notes" class="card">
+        <div v-for="note in notes" :key="note.id" class="card">
           <p class="title">{{ note.title }}</p>
           <p class="main-text">{{ note.note }}.</p>
           <p class="date">{{ note.date.toLocaleDateString("en-US") }}</p>
